@@ -1,0 +1,31 @@
+drupalup_simple_form.Simple_form:
+  path: 'online-book-enquiry'
+  defaults:
+    _form: 'Drupal\drupalup_simple_form\Form\SimpleForm'
+    _title: 'Online Book Enquiry'
+  requirements:
+    _permission: 'access content'
+
+drupalup_simple_form.getEnquiryList:
+  path: '/getEnquiryList'
+  defaults:
+    _controller: '\Drupal\drupalup_simple_form\Controller\TestingController::getEnquiryList'
+    _title: 'Welcome to My Module in Drupal 8'
+  requirements: 
+    _permission: 'access content'
+
+
+drupalup_simple_form.getEnquiryLists:
+  path: '/getEnquiryLists'
+  defaults:
+    _controller: '\Drupal\drupalup_simple_form\Controller\TestController::getEnquiryLists'
+  requirements: 
+    _permission: 'access content'
+
+drupalup_simple_form.edit:
+  path: '/edit/{id}'
+  defaults:
+    _form: 'Drupal\drupalup_simple_form\Form\Edit'
+    _title: 'Edit'
+  requirements:
+    _permission: 'access content'
